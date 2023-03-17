@@ -18,24 +18,24 @@ const createElement = galleryItems
 
 gallery.insertAdjacentHTML("afterbegin", createElement);
 
-
+let instance = '';
 
 gallery.addEventListener("click", (ev) => {
      ev.preventDefault();
   if (ev.target.nodeName === "IMG") {
-    const instance = basicLightbox.create(`
+    instance = basicLightbox.create(`
     <img src="${ev.target.dataset.source}" width="800" height="600">`);
-    console.log(instance);
     instance.show();
   } 
 });
 
 
-// function keyClose(ev) {
-//   if(instance.visible()) {
-//     if(ev.target.code === "Escape") instance.close();
-// }
-// };
+
+function keyClose(ev) {
+  if(instance.visible()) {
+    if(ev.target.code === "Escape") instance.close();
+}
+};
  
-// gallery.addEventListener('keydown', keyClose)
+gallery.addEventListener('keydown', keyClose)
 

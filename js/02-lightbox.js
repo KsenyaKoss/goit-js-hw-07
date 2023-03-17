@@ -22,7 +22,18 @@ const options = {
   
 const lightbox = new SimpleLightbox('.gallery a', options);
 
-gallery.addEventListener('click', (ev)=> {
-    ev.preventDefault();
-    if(ev.target.nodeName === "IMG") lightbox.on();
-})
+
+
+
+
+
+
+
+
+
+
+
+// gallery.addEventListener('click', (ev)=> {
+//     ev.preventDefault();
+//     if(ev.target.nodeName === "IMG") lightbox.on();
+// })
